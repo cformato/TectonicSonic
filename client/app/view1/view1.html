@@ -22,7 +22,7 @@
   <div id="playerList" class="playersView">
     <div ng-repeat="player in players">
       <!-- Seats:{{player.seat}} -->
-      {{player.name[0]}}: ${{player.money}}
+      {{player.name[0]}}: ${{player.money}} / ${{player.stake}}
       <div ng-repeat="name in player.name">
           <!-- <img src="{{playerCardImg}}" alt="Description" class="cards">   -->
           <!-- <img src="../image/card-back.png" alt="Description" class="cards"> -->

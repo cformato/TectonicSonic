@@ -239,7 +239,7 @@ angular.module('app.service', [])
         "uid": 27694,
         "name": "Angus the Angry",
         "money": 100,
-        "stake": 0,
+        "stake": 5,
         "active": true,
         "hand": ["2s","2c"]        
       },
@@ -247,7 +247,7 @@ angular.module('app.service', [])
         "uid": null,
         "name": "Bumble the Brave",
         "money": 110,
-        "stake": 0,
+        "stake": 10,
         "active": true,
         "hand": ["3s","3c"]        
       },
@@ -255,7 +255,7 @@ angular.module('app.service', [])
         "uid": 33285,
         "name": "Charles the Courageous",
         "money": 120,
-        "stake": 0,
+        "stake": 15,
         "active": true,
         "hand": ["4s","4c"]        
       },
@@ -263,7 +263,7 @@ angular.module('app.service', [])
         "uid": null,
         "name": "Darwin the Dreaded",
         "money": 130,
-        "stake": 0,
+        "stake": 20,
         "active": true,
         "hand": ["5s","5c"]        
       },
@@ -271,7 +271,7 @@ angular.module('app.service', [])
         "uid": 91137,
         "name": "Edward the Exuberant",
         "money": 140,
-        "stake": 0,
+        "stake": 25,
         "active": true,
         "hand": ["6s","6c"]        
       },
@@ -279,7 +279,7 @@ angular.module('app.service', [])
         "uid": 73921,
         "name": "Francis the Fearsome",
         "money": 150,
-        "stake": 0,
+        "stake": 30,
         "active": true,
         "hand": ["7s","7c"]        
       }

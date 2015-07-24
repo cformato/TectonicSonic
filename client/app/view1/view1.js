@@ -31,7 +31,7 @@ angular.module('app.view1', ['ngRoute'])
   for (var i = 0; i < 5; i++) {
     // players.push(Users.addUser());
     if(gameState.user[i].active) {
-      var player = {"name":[gameState.user[i].name], "money":gameState.user[i].money};
+      var player = {"name":[gameState.user[i].name], "money":gameState.user[i].money, "stake":gameState.user[i].stake};
       if(gameState.round > 0 && gameState.round < 5) {
         player.hand = cardBacks;
       }
