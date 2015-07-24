@@ -1,59 +1,64 @@
 <div>
-	<div class="gameStats">
-		User Name:
-		<input type="text" name="User Name" ng-model="mySelf.myName" 
-		pattern="^[A-Za-z0-9 _]{1,15}$"> <br>
+  <div class="gameStats">
+    User Name:
+    <input type="text" name="User Name" ng-model="mySelf.myName" 
+    pattern="^[A-Za-z0-9 _]{1,15}$"> <br>
 
-		<button type="button" class="btn-info" ng-click="inputUsername()"  id="inputUsername">Enter Game</button> <br>
+    <button type="button" class="btn-info" ng-click="inputUsername()"  id="inputUsername">Enter Game</button> <br>
 
-		<!-- Game Stats (Currently Simulation Only!):	<br>
-		Received from WebSocket: {{gameState.heapUsed}}; <br>
-		Line2: {{gameState.rss}} <br>
-		Line3: {{gameState.heapTotal}} <br>
-		Line4: {{gameState.heapTotal}} <br> -->
+    <!-- Game Stats (Currently Simulation Only!): <br>
+    Received from WebSocket: {{gameState.heapUsed}}; <br>
+    Line2: {{gameState.rss}} <br>
+    Line3: {{gameState.heapTotal}} <br>
+    Line4: {{gameState.heapTotal}} <br> -->
 
-		Game Stats (Currently Simulation Only!):	<br>
-		Received from WebSocket: {{gameState.cards}}; <br>
-		Line2: {{gameState.turn}} <br>
-		Line3: {{gameState.minstake}} <br>
-		Line4: {{gameState.minstake}} <br>
-	</div>
+    Game Stats (Currently Simulation Only!):  <br>
+    Received from WebSocket: {{gameState.cards}}; <br>
+    Line2: {{gameState.turn}} <br>
+    Line3: {{gameState.minstake}} <br>
+    Line4: {{gameState.minstake}} <br>
+  </div>
 
-	<div class="playersView">
-		<div ng-repeat="player in players">
-			Seats:{{player.seat}}
-			<div ng-repeat="playerCardImg in player.cardsImg">
-					<img src="{{playerCardImg}}" alt="Description"  class="cards">
-			</div>
-		</div>
-	</div>
+  <div id="playerList" class="playersView">
+    <div ng-repeat="player in players">
+      <!-- Seats:{{player.seat}} -->
+      {{player.name[0]}}: ${{player.money}}
+      <div ng-repeat="name in player.name">
+          <!-- <img src="{{playerCardImg}}" alt="Description" class="cards">   -->
+          <!-- <img src="../image/card-back.png" alt="Description" class="cards"> -->
+          <img src="{{player.hand[0]}}" alt="Description" class="cards">
+          <img src="{{player.hand[1]}}" alt="Description" class="cards">
+      </div>
+    </div>
+  </div>
 
-	<div class="table">
-		<div id="deck">
-			<!-- overlap cards -->
-			<img src="{{cardBack}}" alt="Description" class='card'>
-		</div>
+  <div class="table">
+    <div id="deck">
+      <!-- overlap cards -->
+      <img src="{{cardBack}}" alt="Description" class='card'>
+    </div>
 
-		<div id="publicDeck">
-			<div id="publicCards" ng-repeat="publicCardImg in publicCardsImg">
-				<img src="{{publicCardImg}}" alt="Description" class='card'>
-			</div>	
-		</div>
-		<div id='playerDeck'>
-			<div id='myCards' ng-repeat="myCard in mySelf.cards">
-				<img src="../image/{{myCard}}" alt="Description" class='card'>
-			</div>	
-		</div>		
-	</div>
+    <div id="publicDeck">
+      <div id="publicCards" ng-repeat="publicCardImg in publicCardsImg">
+        <img src="{{publicCardImg}}" alt="Description" class='card'>
+      </div>  
+    </div>
+    <div id='playerDeck'>
+      <div id='myCards' ng-repeat="myCard in mySelf.cards">
+        <img src="../image/{{myCard}}" alt="Description" class='card'>
+      </div> 
+      You: $ 
+    </div>    
+  </div>
 
-	<!-- user input -->
-	<div class="controlPanel">
-		<!-- Fix: button lenght -->
-		<button type="button" class="btn-info" ng-click="checkBtn()">Check</button> <br>
-		<button type="button" class="btn-info" ng-click="foldBtn()">Fold</button> <br>
-		<button type="button" class="btn-info" ng-click="callBtn()">Call</button> <br>
-		<button type="button" class="btn-info" ng-click="betBtn()">Bet</button> <br>
-		<button type="button" class="btn-info" ng-click="standBtn()">Stand</button> <br>
-		<button type="button" class="btn-info" ng-click="sitBtn()">Sit</button> <br>
-	</div>
+  <!-- user input -->
+  <div class="controlPanel">
+    <!-- Fix: button lenght -->
+    <button type="button" class="btn-info" ng-click="checkBtn()">Check</button> <br>
+    <button type="button" class="btn-info" ng-click="foldBtn()">Fold</button> <br>
+    <button type="button" class="btn-info" ng-click="callBtn()">Call</button> <br>
+    <button type="button" class="btn-info" ng-click="betBtn()">Bet</button> <br>
+    <button type="button" class="btn-info" ng-click="standBtn()">Stand</button> <br>
+    <button type="button" class="btn-info" ng-click="sitBtn()">Sit</button> <br>
+  </div>
 </div>

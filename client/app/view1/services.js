@@ -81,9 +81,9 @@ angular.module('app.service', [])
  		for (var i = 0, l = cards.length; i < l - 1; i++) {
  			var j = i + Math.floor(Math.random() * (l - i));
  			// swap
- 			var temp	 = cards[i];
- 			cards[i]     = cards[j];
- 			cards[j] 	 = temp;
+ 			var temp = cards[i];
+ 			cards[i] = cards[j];
+ 			cards[j] = temp;
  		}
  		return cards;
  	};
@@ -230,58 +230,58 @@ angular.module('app.service', [])
 .factory('gameStateEmu', [function() {
   var gameStateJSON = [];
   var gameState = {
-    round: 1,
+    round: 5,
     cards: ["qh","kh","ah","2c","3s"],
     minstake: 200,
     turn: 27694,
     user: [
       {
         "uid": 27694,
-        "name": "Bumble the Brave",
-        "money": 130,
+        "name": "Angus the Angry",
+        "money": 100,
         "stake": 0,
         "active": true,
-        "hand": ["4s","4c"]        
+        "hand": ["2s","2c"]        
       },
       {
         "uid": null,
-        "name": "A",
-        "money": 130,
+        "name": "Bumble the Brave",
+        "money": 110,
         "stake": 0,
         "active": true,
-        "hand": ["4s","4c"]        
+        "hand": ["3s","3c"]        
       },
       {
         "uid": 33285,
-        "name": "B",
-        "money": 130,
+        "name": "Charles the Courageous",
+        "money": 120,
         "stake": 0,
         "active": true,
         "hand": ["4s","4c"]        
       },
       {
         "uid": null,
-        "name": "C",
+        "name": "Darwin the Dreaded",
         "money": 130,
         "stake": 0,
         "active": true,
-        "hand": ["4s","4c"]        
+        "hand": ["5s","5c"]        
       },
       {
         "uid": 91137,
-        "name": "D",
-        "money": 130,
+        "name": "Edward the Exuberant",
+        "money": 140,
         "stake": 0,
         "active": true,
-        "hand": ["4s","4c"]        
+        "hand": ["6s","6c"]        
       },
       {
         "uid": 73921,
-        "name": "E",
-        "money": 130,
+        "name": "Francis the Fearsome",
+        "money": 150,
         "stake": 0,
         "active": true,
-        "hand": ["4s","4c"]        
+        "hand": ["7s","7c"]        
       }
     ],
     table: [

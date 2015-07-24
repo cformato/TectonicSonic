@@ -31,13 +31,16 @@
 
 body {
   /*color: BurlyWood;*/
-  color: SandyBrown;
+  /*color: SandyBrown;*/
+  color: White;
+
   /*background-image: url("./image/texture/table3.jpg");*/
   background-image: url("./image/texture/table3_cut.jpg");
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -moz-background-size: cover: ;
+  -o-background-size: cover: ;
+  background-size: cover: ;
 }
 
 .playersView {
@@ -53,7 +56,7 @@ body {
 .cards {
   width: 75px;
   height: 110px;   
-  display: block;
+  display: inline-block;
   border: 2px solid black;
   border-radius: 10px;
   /*position: absolute;*/
@@ -81,7 +84,8 @@ body {
   cursor: pointer;
   float:left;
   /*transform: rotateX(50deg) rotateY(20deg) rotateZ(15deg);*/
-  transform: rotateX(50deg) rotateY(0deg) rotateZ(15deg);
+  /*transform: rotateX(50deg) rotateY(0deg) rotateZ(15deg);*/
+  transform: rotateX(40deg) rotateY(-10deg) rotateZ(10deg);
 }
 
 .table {
